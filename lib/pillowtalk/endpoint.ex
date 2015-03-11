@@ -23,8 +23,8 @@ defmodule Pillowtalk.Endpoint do
   plug Plug.Session,
     store: :cookie,
     key: "_pillowtalk_key",
-    signing_salt: "w6eo1waF",
-    encryption_salt: "1PYXgnIm"
+    signing_salt: "SMNFsVbN",
+    encryption_salt: "5zdLouNY"
 
   plug :router, Pillowtalk.Router
 end

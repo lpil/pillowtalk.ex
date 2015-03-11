@@ -1,3 +1,3 @@
 defmodule Pillowtalk.LayoutView do
-  use Pillowtalk.View
+  use Pillowtalk.Web, :view
 end

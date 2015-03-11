@@ -1,10 +1,15 @@
 use Mix.Config
 
+# For production, we configure the host to read the PORT
+# from the system environment. Therefore, you will need
+# to set PORT=80 before running your server.
+#
+# You should also configure the url host to something
+# meaningful, we use this information when generating URLs.
 config :pillowtalk, Pillowtalk.Endpoint,
-  url: [host: "example.com"],
-  http: [port: System.get_env("PORT")],
-  secret_key_base: "8B6UuLpv/2QtFF5Rvga1Xkgy4xT6nYi/rrzZ7HkO1OlFOPoH+v73l4031gLURsbp"
-  
+  http: [port: {:system, "PORT"}],
+  url: [host: "example.com"]
+
 # ## SSL Support
 #
 # To get SSL working, you will need to add the `https` key
@@ -18,9 +23,8 @@ config :pillowtalk, Pillowtalk.Endpoint,
 #
 # Where those two env variables point to a file on
 # disk for the key and cert.
-  
 
-# Do not pring debug messages in production
+# Do not print debug messages in production
 config :logger, level: :info
 
 # ## Using releases
@@ -35,3 +39,7 @@ config :logger, level: :info
 #
 #     config :pillowtalk, Pillowtalk.Endpoint, server: true
 #
+
+# Finally import the config/prod.secret.exs
+# which should be versioned separately.
+import_config "prod.secret.exs"

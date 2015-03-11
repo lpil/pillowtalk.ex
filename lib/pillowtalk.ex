@@ -9,6 +9,8 @@ defmodule Pillowtalk do
     children = [
       # Start the endpoint when the application starts
       supervisor(Pillowtalk.Endpoint, []),
+      # Start the Ecto repository
+      worker(Pillowtalk.Repo, []),
       # Here you could define other workers and supervisors as children
       # worker(Pillowtalk.Worker, [arg1, arg2, arg3]),
     ]

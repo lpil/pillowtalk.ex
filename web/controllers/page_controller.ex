@@ -1,5 +1,5 @@
 defmodule Pillowtalk.PageController do
-  use Phoenix.Controller
+  use Pillowtalk.Web, :controller
 
   plug :action
 

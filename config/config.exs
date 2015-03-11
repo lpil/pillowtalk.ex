@@ -8,10 +8,10 @@ use Mix.Config
 # Configures the endpoint
 config :pillowtalk, Pillowtalk.Endpoint,
   url: [host: "localhost"],
-  secret_key_base: "8B6UuLpv/2QtFF5Rvga1Xkgy4xT6nYi/rrzZ7HkO1OlFOPoH+v73l4031gLURsbp",
+  secret_key_base: "7AAwOmp929A5hV2fdL9Z+SFzxvSfgHdUPa22ygWQ1YSSwzuUEqHvfQSdlvSRvK2/",
   debug_errors: false,
-  pubsub: [adapter: Phoenix.PubSub.PG2]
-
+  pubsub: [name: Pillowtalk.PubSub,
+           adapter: Phoenix.PubSub.PG2]
 
 # Configures Elixir's Logger
 config :logger, :console,
