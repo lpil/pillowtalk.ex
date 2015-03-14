@@ -4,7 +4,7 @@ use Mix.Config
 # you likely want to automate and keep it away from
 # your version control system.
 config :pillowtalk, Pillowtalk.Endpoint,
-  secret_key_base: "2b028tJ/i+qyMLQ+5sA+2auyJ3rwWfIhNa86rs9Y0WNwX/SKW2mAOTUD9jP4qWIf"
+  secret_key_base: "NuWdNkEHKgn+MQAG/4+9Fg/B3UntFtML9+WytFkKrM+ag+lh8gVK+3BkDU2f651s"
 
 # Configure your database
 config :pillowtalk, Pillowtalk.Repo,

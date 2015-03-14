@@ -8,7 +8,7 @@ use Mix.Config
 # Configures the endpoint
 config :pillowtalk, Pillowtalk.Endpoint,
   url: [host: "localhost"],
-  secret_key_base: "7AAwOmp929A5hV2fdL9Z+SFzxvSfgHdUPa22ygWQ1YSSwzuUEqHvfQSdlvSRvK2/",
+  secret_key_base: "eMs6/WjPEnEsPVzmlguhx9/OkgEpjpEcip7ANUkaX5TwKpUgE0X+5e2cu62e/32f",
   debug_errors: false,
   pubsub: [name: Pillowtalk.PubSub,
            adapter: Phoenix.PubSub.PG2]
