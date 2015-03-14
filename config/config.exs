@@ -10,8 +10,10 @@ config :pillowtalk, Pillowtalk.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "kI3jw6JsRbWDBB2jX3ixa898PX3EXbz7utZWaGn1am5sB7nlxhX/TDwmlovnTD42",
   debug_errors: false,
-  pubsub: [name: Pillowtalk.PubSub,
-           adapter: Phoenix.PubSub.PG2]
+  pubsub: [
+    name: Pillowtalk.PubSub,
+    adapter: Phoenix.PubSub.PG2
+  ]
 
 # Configures Elixir's Logger
 config :logger, :console,

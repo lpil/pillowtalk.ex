@@ -32,4 +32,4 @@ config :pillowtalk, Pillowtalk.Repo,
   adapter: Ecto.Adapters.Postgres,
   username: "postgres",
   password: "postgres",
-  database: "pillowtalk_dev"
+  database: "pillowtalk"

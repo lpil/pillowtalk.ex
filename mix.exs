@@ -15,16 +15,25 @@ defmodule Pillowtalk.Mixfile do
   # Type `mix help compile.app` for more information
   def application do
     [mod: {Pillowtalk, []},
-     applications: [:phoenix, :cowboy, :logger]]
+     applications: [
+       :phoenix,
+       :cowboy,
+       :logger,
+       :postgrex,
+       :ecto
+     ]]
   end
 
   # Specifies your project dependencies
   #
   # Type `mix help deps` for examples and options
   defp deps do
-    [{:phoenix, "~> 0.10.0"},
-     {:phoenix_ecto, "~> 0.1"},
-     {:postgrex, ">= 0.0.0"},
-     {:cowboy, "~> 1.0"}]
+    [
+      {:phoenix, "~> 0.10.0"},
+      {:phoenix_ecto, "~> 0.1"},
+      {:postgrex, ">= 0.0.0"},
+      {:cowboy, "~> 1.0"},
+      {:postgrex, "~> 0.7"}
+    ]
   end
 end
