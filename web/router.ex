@@ -15,7 +15,7 @@ defmodule Pillowtalk.Router do
   scope "/", Pillowtalk do
     pipe_through :browser # Use the default browser stack
 
-    get "/", PageController, :index
+    get "/", PageController, :index, as: :root
 
     resources "/operators", OperatorController, only: [
       :index,
