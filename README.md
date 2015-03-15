@@ -1,5 +1,10 @@
 # Pillowtalk
 
+A webchat application for helplines, and similar organisations.
+
+Development documentation can be found
+[here](https://github.com/lpil/pillowtalk.ex/tree/master/doc).
+
 ## Install it
 
 You've got Erlang, Elixir, and PostgreSQL installed, right?
