@@ -1,0 +1,12 @@
+<h2>
+  Operators
+</h2>
+
+<%= for {operator, i} <- Stream.with_index @operators do %>
+  <p>
+    <b>
+      Operator <%= i + 1 %>:
+    </b>
+    <%= operator.email %>
+  </p>
+<% end %>
