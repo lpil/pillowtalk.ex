@@ -3,6 +3,8 @@
 * [Ecto & Databases](https://github.com/lpil/pillowtalk.ex/blob/master/doc/ecto_and_databases.md)
 * [Chat & Phoenix JS](https://github.com/lpil/pillowtalk.ex/blob/master/doc/chat_and_phoenix_js.md)
 
+[Phoenix Guides](https://github.com/lancehalvorsen/phoenix-guides)
+
 ## Notes
 
 * http://gogogarrett.sexy/programming-in-elixir-with-the-phoenix-framework-building-a-basic-CRUD-app/
