@@ -20,9 +20,9 @@ defmodule Pillowtalk.Router do
     resources "/operators", OperatorController, only: [
       :index,
       # :edit,
-      # :new,
+      :new,
       # :show,
-      # :create,
+      :create,
       # :update,
       # :delete,
     ]

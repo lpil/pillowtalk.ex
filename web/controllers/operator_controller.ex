@@ -11,4 +11,21 @@ defmodule Pillowtalk.OperatorController do
 
     render conn, "index.html", operators: operators, foo: [1,2,3,4,5]
   end
+
+  def new(conn, _params) do
+    changeset = Operator.changeset(%Operator{})
+    
+    render conn, "new.html", changeset: changeset
+  end
+
+  def create(conn, %{"operator" => params}) do
+    changeset = Operator.changeset(%Operator{}, params)
+    
+    if changeset.valid? do
+      raise "valid"
+    else
+      IO.inspect changeset
+      raise "not valid"
+    end
+  end
 end

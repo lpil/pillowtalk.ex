@@ -6,12 +6,12 @@ defmodule Pillowtalk.Operator do
     timestamps
   end
 
-  def change(operator, params) do
+  def changeset(operator, params \\ nil) do
     operator
     |> cast(params, ~w(), ~w(email))
     |> update_change(:email, &String.downcase(&1))
     |> validate_length(:email, 6..50)
-    |> validate_format(:email, ~r/^\d+@\d+$/)
+    |> validate_format(:email, ~r/^[\w\.\+.]+@[\w\.]+$/)
     |> validate_unique(:email, on: Pillowtalk.Repo)
   end
 end
