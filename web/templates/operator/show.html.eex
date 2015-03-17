@@ -1,3 +1,9 @@
 <h2>Operator <%= @operator.id %></h2>
 
-Email: <%= @operator.email %>
+<p>
+  Email: <%= @operator.email %>
+</p>
+
+<p>
+  <a href="<%= operator_path(@conn, :index) %>">Back</a>
+</p>

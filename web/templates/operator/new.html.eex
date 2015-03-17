@@ -7,3 +7,7 @@
 
   <%= submit "Submit" %>
 <% end %>
+
+<p>
+  <a href="<%= operator_path(@conn, :index) %>">Back</a>
+</p>

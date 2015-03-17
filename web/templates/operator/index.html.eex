@@ -2,11 +2,24 @@
   Operators
 </h2>
 
+<p>
+  <a href="<%= operator_path(@conn, :new) %>">
+    Register new operator
+  </a>
+</p>
+
 <%= for {operator, i} <- Stream.with_index @operators do %>
   <p>
     <b>
       Operator <%= i + 1 %>:
     </b>
-    <%= operator.email %>
+
+    <a href="<%= operator_path(@conn, :show, operator) %>">
+      <%= operator.email %>
+    </a>
   </p>
 <% end %>
+
+<p>
+  <a href="<%= root_path(@conn, :index) %>">Back</a>
+</p>

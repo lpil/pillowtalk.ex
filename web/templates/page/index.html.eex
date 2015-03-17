@@ -1,4 +1,11 @@
-<h2>Welcome to Phoenix!</h2>
+<h2>Pillowtalk</h2>
+
+<h4>Sections</h4>
+<ul>
+  <li>
+    <a href="<%= operator_path(@conn, :index) %>">Operators</a>
+  </li>
+</ul>
 
 <h4>Resources</h4>
 <ul>
