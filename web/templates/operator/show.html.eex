@@ -1,0 +1,3 @@
+<h2>Operator <%= @operator.id %></h2>
+
+Email: <%= @operator.email %>

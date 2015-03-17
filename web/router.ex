@@ -21,7 +21,7 @@ defmodule Pillowtalk.Router do
       :index,
       # :edit,
       :new,
-      # :show,
+      :show,
       :create,
       # :update,
       # :delete,

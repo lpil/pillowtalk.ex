@@ -1,6 +1,8 @@
 defmodule Pillowtalk.OperatorController do
   use Pillowtalk.Web, :controller
 
+  import Ecto.Query
+
   alias Pillowtalk.Repo
   alias Pillowtalk.Operator
 
@@ -26,6 +28,20 @@ defmodule Pillowtalk.OperatorController do
       redirect conn, to: operator_path(conn, :index)
     else
       render conn, "new.html", changeset: changeset
+    end
+  end
+
+  def show(conn, %{"id" => id}) do
+    query = from o in Operator,
+            where: o.id == ^id
+    operator = Repo.one(query)
+
+    if operator do
+      render conn, "show.html", operator: operator
+    else
+      conn
+      |> put_status(404)
+      |> text "Not found!" 
     end
   end
 end
