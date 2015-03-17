@@ -22,10 +22,10 @@ defmodule Pillowtalk.OperatorController do
     changeset = Operator.changeset(%Operator{}, params)
     
     if changeset.valid? do
-      raise "valid"
+      operator = Repo.insert(changeset)
+      redirect conn, to: operator_path(conn, :index)
     else
-      IO.inspect changeset
-      raise "not valid"
+      render conn, "new.html", changeset: changeset
     end
   end
 end

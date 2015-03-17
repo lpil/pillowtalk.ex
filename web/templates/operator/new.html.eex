@@ -1,0 +1,9 @@
+<h2>New Operator</h2>
+
+<%= form_for @changeset, operator_path(@conn, :create), fn f -> %>
+  <label>
+    Email: <%= email_input f, :email %>
+  </label>
+
+  <%= submit "Submit" %>
+<% end %>
