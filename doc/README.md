@@ -1,8 +1,9 @@
 # Pillowtalk Development Documentation
 
-* [Ecto & Databases](https://github.com/lpil/pillowtalk.ex/blob/master/doc/ecto_and_databases.md)
 * [Chat & Phoenix JS](https://github.com/lpil/pillowtalk.ex/blob/master/doc/chat_and_phoenix_js.md)
+* [Ecto & Databases](https://github.com/lpil/pillowtalk.ex/blob/master/doc/ecto_and_databases.md)
 * [Templating](https://github.com/lpil/pillowtalk.ex/blob/master/doc/templating.md)
+* [Views & Rendering](https://github.com/lpil/pillowtalk.ex/blob/master/doc/views_and_rendering.md)
 
 [Phoenix Guides](https://github.com/lancehalvorsen/phoenix-guides)
 
