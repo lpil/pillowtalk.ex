@@ -1,0 +1,10 @@
+<% path = @to || operator_path(@conn, :create)  %>
+<%= form_for @changeset, path, fn f -> %>
+  <label>
+    Email: <%= email_input f, :email %>
+  </label>
+
+  <p>
+    <%= submit "Submit" %>
+  </p>
+<% end %>

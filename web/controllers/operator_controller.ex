@@ -16,13 +16,13 @@ defmodule Pillowtalk.OperatorController do
 
   def new(conn, _params) do
     changeset = Operator.changeset(%Operator{})
-    
+
     render conn, "new.html", changeset: changeset
   end
 
   def create(conn, %{"operator" => params}) do
     changeset = Operator.changeset(%Operator{}, params)
-    
+
     if changeset.valid? do
       operator = Repo.insert(changeset)
       redirect conn, to: operator_path(conn, :index)
@@ -32,16 +32,47 @@ defmodule Pillowtalk.OperatorController do
   end
 
   def show(conn, %{"id" => id}) do
-    query = from o in Operator,
-            where: o.id == ^id
-    operator = Repo.one(query)
+    operator = operator_by_id(id)
 
     if operator do
       render conn, "show.html", operator: operator
     else
-      conn
-      |> put_status(404)
-      |> text "Not found!" 
+      not_found conn
     end
+  end
+
+  def edit(conn, %{"id" => id}) do
+    operator = operator_by_id(id)
+
+    if operator do
+      changeset = Operator.changeset(operator)
+      render conn, "edit.html", changeset: changeset
+    else
+      not_found conn
+    end
+  end
+
+  def update(conn, %{"id" => id, "operator" => params}) do
+    changeset = Operator.changeset(operator_by_id(id), params)
+
+    if changeset.valid? do
+      operator = Repo.update(changeset)
+      redirect conn, to: operator_path(conn, :index)
+    else
+      render conn, "edit.html", changeset: changeset
+    end
+  end
+
+  defp operator_by_id(id) do
+    query = from o in Operator,
+            where: o.id == ^id
+
+    operator = Repo.one(query)
+  end
+
+  defp not_found(conn) do
+    conn
+    |> put_status(404)
+    |> text "Not found!"
   end
 end

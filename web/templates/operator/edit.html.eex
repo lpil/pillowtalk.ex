@@ -1,0 +1,10 @@
+<h2>Edit Operator <%= @changeset.model.id %> </h2>
+
+<%= render "_form.html", changeset: @changeset,
+                         to: operator_path(@conn, :update, @changeset.model) %>
+
+<p>
+  <a href="<%= operator_path(@conn, :show, @changeset.model) %>">
+    Back
+  </a>
+</p>
