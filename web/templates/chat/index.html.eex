@@ -1,0 +1,13 @@
+<h2>Chat</h2>
+
+<div class="chat">
+  <div class="chat__messages">
+  </div>
+  <p>
+    <input></input>
+    <a class="chat__submit" href="#">Send</a>
+  </p>
+</div>
+
+<script src="<%= static_path(@conn, "/js/phoenix.js") %>"></script>
+<script src="<%= static_path(@conn, "/js/app.js") %>"></script>

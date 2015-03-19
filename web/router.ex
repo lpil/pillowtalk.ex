@@ -13,19 +13,12 @@ defmodule Pillowtalk.Router do
   end
 
   scope "/", Pillowtalk do
-    pipe_through :browser # Use the default browser stack
+    pipe_through :browser
 
-    get "/", PageController, :index, as: :root
+    get "/",     PageController, :index, as: :root
+    get "/chat", ChatController, :index
 
-    resources "/operators", OperatorController, only: [
-      :index,
-      :edit,
-      :new,
-      :show,
-      :create,
-      :update,
-      :delete,
-    ]
+    resources "/operators", OperatorController
   end
 
   socket "/ws", Chat do
