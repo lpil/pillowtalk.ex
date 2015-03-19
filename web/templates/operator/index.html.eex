@@ -15,8 +15,11 @@
     </b>
 
     <a href="<%= operator_path(@conn, :show, operator) %>">
-      <%= operator.email %>
-    </a>
+      <%= operator.email %></a>
+
+    <%= unless operator.active do %>
+      <i>[deactivated]</i>
+    <% end %>
   </p>
 <% end %>
 

@@ -63,6 +63,15 @@ defmodule Pillowtalk.OperatorController do
     end
   end
 
+  def delete(conn, %{"id" => id}) do
+    operator = operator_by_id(id)
+    changeset = Operator.changeset(operator, %{"active" => false})
+    Repo.update(changeset)
+
+    redirect conn, to: operator_path(conn, :index)
+  end
+
+
   defp operator_by_id(id) do
     query = from o in Operator,
             where: o.id == ^id

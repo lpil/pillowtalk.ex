@@ -4,6 +4,7 @@ defmodule Pillowtalk.Repo.Migrations.InitialOperatorsCreate do
   def up do
     create table(:operators) do
       add :email, :string, null: false, unique: true
+      add :active, :bool, null: false, default: true
       timestamps
     end
   end

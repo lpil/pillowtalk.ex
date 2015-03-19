@@ -3,6 +3,10 @@
 <%= render "_form.html", changeset: @changeset,
                          to: operator_path(@conn, :update, @changeset.model) %>
 
+<%= link "Deactivate Operator",
+    to: operator_path(@conn, :delete, @changeset.model),
+    method: :delete %>
+
 <p>
   <a href="<%= operator_path(@conn, :show, @changeset.model) %>">
     Back
