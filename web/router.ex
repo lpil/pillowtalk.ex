@@ -28,6 +28,10 @@ defmodule Pillowtalk.Router do
     ]
   end
 
+  socket "/ws", Chat do
+    channel "rooms:*", RoomChannel
+  end
+
   # Other scopes may use custom stacks.
   # scope "/api", Pillowtalk do
   #   pipe_through :api
